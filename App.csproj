@@ -93,13 +93,40 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Document.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\DocX.4.0.25103.5784\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Drawing.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\DocX.4.0.25103.5784\lib\net40\Xceed.Drawing.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\DocX.4.0.25103.5784\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAsuStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAsuStaff.Designer.cs">
+      <DependentUpon>AddAsuStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports.Designer.cs">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllRequests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllRequests.Designer.cs">
       <DependentUpon>AllRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateReport.Designer.cs">
+      <DependentUpon>CreateReport.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateReques.cs">
       <SubType>Form</SubType>
@@ -113,6 +140,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAssignedRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAssignedRequests.Designer.cs">
+      <DependentUpon>MyAssignedRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="MyRequests.cs">
       <SubType>Form</SubType>
@@ -134,14 +167,32 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAsuStaff.resx">
+      <DependentUpon>AddAsuStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports.resx">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllRequests.resx">
       <DependentUpon>AllRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateReport.resx">
+      <DependentUpon>CreateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateReques.resx">
       <DependentUpon>CreateReques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAssignedRequests.resx">
+      <DependentUpon>MyAssignedRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyRequests.resx">
       <DependentUpon>MyRequests.cs</DependentUpon>
@@ -160,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

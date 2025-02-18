@@ -49,6 +49,31 @@ namespace App
             Form child = new AllRequests(this.user);
             changeForm(child);
         }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form child = new MyAssignedRequests(this.user);
+            changeForm(child);
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form child = new AddAsuStaff(this.user);
+            changeForm(child);
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form child = new Users();
+            changeForm(child);
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form child = new CreateReport(this.user);
+            changeForm(child);
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form child = new AllReports();
+            changeForm(child);
+        }
 
         //<---- Utils ---->\\
 

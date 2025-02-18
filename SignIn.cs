@@ -46,6 +46,8 @@ namespace App
                 this.home.groupBox1.Visible = false;
                 this.home.groupBox2.Visible = true;
                 this.home.groupBox3.Visible = false;
+                this.home.groupBox4.Visible = false;
+                this.home.groupBox5.Visible = false;
             }
 
             if (Convert.ToString(dt.Rows[0]["role"]) == "ASU_staff")
@@ -53,6 +55,8 @@ namespace App
                 this.home.groupBox1.Visible = false;
                 this.home.groupBox2.Visible = true;
                 this.home.groupBox3.Visible = true;
+                this.home.groupBox4.Visible = false;
+                this.home.groupBox5.Visible = true;
             }
 
             if (Convert.ToString(dt.Rows[0]["role"]) == "Admin")
@@ -60,6 +64,9 @@ namespace App
                 this.home.groupBox1.Visible = false;
                 this.home.groupBox2.Visible = true;
                 this.home.groupBox3.Visible = true;
+                this.home.groupBox4.Visible = true;
+                this.home.groupBox5.Visible = true;
+
             }
 
 

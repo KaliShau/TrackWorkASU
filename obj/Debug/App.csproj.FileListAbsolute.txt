@@ -46,3 +46,11 @@ C:\Users\User\Desktop\App\obj\Debug\App.SignUp.resources
 C:\Users\User\Desktop\App\obj\Debug\App.CreateReques.resources
 C:\Users\User\Desktop\App\obj\Debug\App.MyRequests.resources
 C:\Users\User\Desktop\App\obj\Debug\App.AllRequests.resources
+C:\Users\User\Desktop\App\obj\Debug\App.MyAssignedRequests.resources
+C:\Users\User\Desktop\App\obj\Debug\App.AddAsuStaff.resources
+C:\Users\User\Desktop\App\obj\Debug\App.Users.resources
+C:\Users\User\Desktop\App\obj\Debug\App.CreateReport.resources
+C:\Users\User\Desktop\App\bin\Debug\Xceed.Document.NET.dll
+C:\Users\User\Desktop\App\bin\Debug\Xceed.Drawing.NET.dll
+C:\Users\User\Desktop\App\bin\Debug\Xceed.Words.NET.dll
+C:\Users\User\Desktop\App\obj\Debug\App.AllReports.resources

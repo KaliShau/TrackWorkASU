@@ -10,20 +10,15 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class AllRequests : Form
+    public partial class AllReports : Form
     {
-        DataTable user;
         private string _selectedRequestId;
-        public AllRequests(DataTable dt)
+        public AllReports()
         {
             InitializeComponent();
-            this.user = dt;
 
             DatabaseManager db = new DatabaseManager();
-            dataGridView1.DataSource = db.getRequests();
-
-
-
+            dataGridView1.DataSource = db.getReports();
         }
 
         private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
@@ -55,9 +50,9 @@ namespace App
             {
                 try
                 {
-                   DatabaseManager db = new DatabaseManager();
-                    db.updateRequestForAccepted(Convert.ToInt32(this._selectedRequestId), 2, Convert.ToInt16(this.user.Rows[0]["user_id"]));
-                    dataGridView1.DataSource = db.getRequests();
+                    DatabaseManager db = new DatabaseManager();
+                    db.ExportReportClosedAtMonthToDocx(Convert.ToInt32(this._selectedRequestId));
+                    dataGridView1.DataSource = db.getReports();
 
                 }
                 catch (Exception ex)
@@ -69,11 +64,6 @@ namespace App
             {
                 MessageBox.Show("Не выбран request_id.");
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
