@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class CreateReques
+    partial class CreateRequest
     {
         /// <summary>
         /// Required designer variable.
