@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.src.shared;
 
 namespace App
 {
     public partial class Home : Form
     {
-
         public DataTable user;
-
+        FormManager _formManager;
         public Home()
         {
             InitializeComponent();
+            _formManager = new FormManager();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,58 +29,44 @@ namespace App
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form child = new CreateReques(this.user);
-            changeForm(child);
+            Form child = new CreateRequest(this.user);
+            _formManager.changeForm(child, panel6);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Form child = new MyRequests(this.user);
-            changeForm(child);
-
+            _formManager.changeForm(child, panel6);
         }
         private void button6_Click(object sender, EventArgs e)
         {
             Form child = new AllRequests(this.user);
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
         private void button5_Click(object sender, EventArgs e)
         {
             Form child = new MyAssignedRequests(this.user);
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
         private void button8_Click(object sender, EventArgs e)
         {
             Form child = new AddAsuStaff(this.user);
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
         private void button7_Click(object sender, EventArgs e)
         {
             Form child = new Users();
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
         private void button10_Click(object sender, EventArgs e)
         {
             Form child = new CreateReport(this.user);
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
         private void button9_Click(object sender, EventArgs e)
         {
             Form child = new AllReports();
-            changeForm(child);
+            _formManager.changeForm(child, panel6);
         }
-
-        //<---- Utils ---->\\
-
-        private void changeForm(Form form)
-        {
-            form.Dock = DockStyle.Fill;
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            panel6.Controls.Clear();
-            panel6.Controls.Add(form);
-            form.Show();
-        }
-
     }
 }

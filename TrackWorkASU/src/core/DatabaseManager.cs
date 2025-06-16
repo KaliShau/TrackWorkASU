@@ -1,24 +1,17 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 using Xceed.Document.NET;
 using Xceed.Words.NET;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace App
 {
     public class DatabaseManager
     {
-
         string StrConnection = "Server=localhost; port=5432; User Id=postgres ;Password=root;database=asu_database;";
         NpgsqlConnection Con;
         NpgsqlCommand Cmd;
-
 
         public void connection()
         {
@@ -67,7 +60,6 @@ namespace App
             Cmd.Parameters.AddWithValue("username", username);
             Cmd.Parameters.AddWithValue("pass", pass);
             Cmd.ExecuteReader();
-
 
             dt = this.login(username, pass);
 
@@ -171,7 +163,6 @@ namespace App
             Cmd.ExecuteReader();
             MessageBox.Show("Запрос выполнен!!");
         }
-
 
         public DataTable getRequestsClient(int client_id)
         {
@@ -286,13 +277,13 @@ namespace App
         public void ExportReportClosedAtMonthToDocx(int reportId)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Word Documents|*.docx"; 
+            saveFileDialog.Filter = "Word Documents|*.docx";
             saveFileDialog.Title = "Сохранить отчет";
-            saveFileDialog.FileName = $"Отчет_{DateTime.Now:yyyyMMdd_HHmmss}.docx"; 
+            saveFileDialog.FileName = $"Отчет_{DateTime.Now:yyyyMMdd_HHmmss}.docx";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string filePath = saveFileDialog.FileName; 
+                string filePath = saveFileDialog.FileName;
 
                 using (var connection = new NpgsqlConnection(StrConnection))
                 {
